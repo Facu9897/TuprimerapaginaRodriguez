@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Inicio - Mi Blog{% endblock %}
+
+{% block content %}
+<h2>Lista de Posts</h2>
+<div class="post-list"> 
+    {% for post in posts %}
+    <article class="post"> 
+        <h3>{{ post.titulo }}</h3>
+        <p class="post-content">{{ post.contenido|truncatechars:100 }}</p>
+        <div class="post-meta">
+            <p class="category"><strong>Categoría:</strong> {{ post.categoria }}</p>
+            <p class="date"><em>Publicado el:</em> {{ post.fecha }}</p>
+        </div>
+        <a href="{% url 'crear_comentario' post.id %}" class="comment-link">Agregar Comentario</a>
+    </article>
+    {% empty %}
+    <p>No hay posts disponibles.</p>
+    {% endfor %}
+</div>
+{% endblock %}

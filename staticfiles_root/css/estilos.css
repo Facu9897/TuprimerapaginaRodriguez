@@ -1,0 +1,301 @@
+/* estilos.css */
+
+/* ==================================
+   Estilos Generales
+   ================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Fondo gris claro */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: #007bff; /* Color azul para enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+a:hover {
+    color: #0056b3; /* Color azul más oscuro al pasar el ratón */
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #212529; /* Color de los títulos */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ==================================
+   Estilos del Header
+   ================================== */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dee2e6; /* Línea sutil debajo del header */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Sombra suave */
+    text-align: center; /* Centrar el título */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #28a745; /* Un color llamativo para el título */
+}
+
+/* ==================================
+   Estilos de la Navegación
+   ================================== */
+nav ul {
+    display: flex;
+    justify-content: center; /* Centrar los enlaces de navegación */
+    padding-top: 15px;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #495057; /* Color de los enlaces de navegación */
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #28a745; /* Cambiar color al pasar el ratón */
+    text-decoration: none; /* Quitar subrayado al hacer hover en la navegación */
+}
+
+/* ==================================
+   Estilos del Main
+   ================================== */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para el contenido principal */
+}
+
+/* ==================================
+   Estilos de la Lista de Posts (home.html)
+   ================================== */
+.post-list {
+    margin-bottom: 2rem;
+}
+
+.post {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.post h3 {
+    margin-top: 0;
+    color: #343a40; /* Título del post más oscuro */
+}
+
+.post-content {
+    color: #6c757d; /* Contenido del post en gris más claro */
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap; /* Para que los elementos pasen a la siguiente línea en pantallas pequeñas */
+    gap: 10px; /* Espacio entre los elementos meta */
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.category {
+    font-weight: bold;
+}
+
+.date {
+    font-style: italic;
+}
+
+.comment-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745; /* Color verde para el botón de comentario */
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.comment-link:hover {
+    background-color: #1e7e34;
+    text-decoration: none;
+}
+
+/* ==================================
+   Estilos del Formulario de Búsqueda (buscar.html)
+   ================================== */
+.search-form {
+    margin-bottom: 2rem;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.search-form form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.search-results {
+    margin-top: 2rem;
+}
+
+.result-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.result-item h4 {
+    margin-top: 0;
+    color: #343a40;
+}
+
+/* ==================================
+   Estilos del Formulario de Post (form.html)
+   ================================== */
+.post-form {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.post-form form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+.post-form form input[type="text"],
+.post-form form textarea,
+.post-form form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.post-form form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.post-form form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ==================================
+   Estilos del Footer
+   ================================== */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* ==================================
+   Diseño Responsivo (Media Queries)
+   ================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .search-form form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form input[type="text"] {
+        margin-bottom: 10px;
+    }
+}

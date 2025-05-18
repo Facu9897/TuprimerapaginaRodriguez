@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Buscar Post{% endblock %}
+
+{% block content %}
+<h2>Buscar Posts</h2>
+<div class="search-form"> 
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+
+{% if resultados %}
+    <div class="search-results"> 
+        <h3>Resultados de búsqueda:</h3>
+        <ul>
+        {% for post in resultados %}
+            <li class="result-item"> 
+                <h4>{{ post.titulo }}</h4>
+                <p>{{ post.contenido|truncatechars:100 }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% elif form.is_bound %}
+    <p>No se encontraron resultados.</p>
+{% endif %}
+{% endblock %}
